@@ -13,7 +13,7 @@ function Login() {
     const handleSubmission = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:3000/login', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ function Login() {
     }
 
     const fetchuser = async (authToken) => {
-        const response = await fetch('http://localhost:3000/getuser', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/getuser', {
             method: 'POST',
             headers: {
                 'authToken': authToken

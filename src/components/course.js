@@ -18,7 +18,7 @@ const Course = ({ courseId, savedcourses }) => {
     const descriptionRefs = useRef({});
 
     useEffect(() => {
-        fetch(`http://localhost:3000/course/${courseId}`)
+        fetch(`https://oned-backend-yfvd.onrender.com/course/${courseId}`)
             .then(response => response.json())
             .then(data => {
                 setData(data);
@@ -68,7 +68,7 @@ const Course = ({ courseId, savedcourses }) => {
 
     const bookmarkcourse = async () => {
         if (userid) {
-            const response = await fetch('http://localhost:3000/bookmark', {
+            const response = await fetch('https://oned-backend-yfvd.onrender.com/bookmark', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ const Course = ({ courseId, savedcourses }) => {
     }
 
     const unbookmarkcourse = async () => {
-        const response = await fetch('http://localhost:3000/bookmark/remove', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/bookmark/remove', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

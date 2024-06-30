@@ -48,7 +48,7 @@ const Signup = () => {
     const submission = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:3000/signup', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -70,7 +70,7 @@ const Signup = () => {
     }
 
     const fetchuser = async (authToken) => {
-        const response = await fetch('http://localhost:3000/getuser', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/getuser', {
             method: 'POST',
             headers: {
                 'authToken': authToken
@@ -83,7 +83,7 @@ const Signup = () => {
         savepass(user);
     }
     const savepass = async (user) => {
-        const response = await fetch('http://localhost:3000/userpass', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/userpass', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -99,7 +99,7 @@ const Signup = () => {
         }
     }
     const userInfoSubmission = async (user) => {
-        const response = await fetch('http://localhost:3000/signupinfo', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/signupinfo', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

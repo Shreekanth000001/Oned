@@ -46,7 +46,7 @@ const Account = () => {
 
     useEffect(() => {
         const getuserinfo = async () => {
-            const response = await fetch('http://localhost:3000/userinfo/g', {
+            const response = await fetch('https://oned-backend-yfvd.onrender.com/userinfo/g', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ const Account = () => {
                 });
             }
 
-            const userResponse = await fetch('http://localhost:3000/getuser', {
+            const userResponse = await fetch('https://oned-backend-yfvd.onrender.com/getuser', {
                 method: 'POST',
                 headers: {
                     'authToken': authToken
@@ -97,7 +97,7 @@ const Account = () => {
     }
     const helpSubmit = async (e) => {
         e.preventDefault()
-        const response = await fetch('http://localhost:3000/help', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/help', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -122,7 +122,7 @@ const Account = () => {
     }
 
     const profileSubmition = async () => {
-        const response = await fetch('http://localhost:3000/userinfo/p', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/userinfo/p', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -160,7 +160,7 @@ const Account = () => {
     };
 
     const settingsSubmition = async (name) => {
-        const response = await fetch('http://localhost:3000/userinfo/sp', {
+        const response = await fetch('https://oned-backend-yfvd.onrender.com/userinfo/sp', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

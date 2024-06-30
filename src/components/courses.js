@@ -9,7 +9,7 @@ const Courses = ({ faculty }) => {
 
     useEffect(() => {
         // Fetch courses from the backend
-        fetch(`http://localhost:3000/faculty/${faculty}`)
+        fetch(`https://oned-backend-yfvd.onrender.com/faculty/${faculty}`)
             .then(response => response.json())
             .then(data => setCourses(data))
             .catch(error => console.error('Error fetching courses:', error));

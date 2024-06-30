@@ -18,7 +18,7 @@ const Sidebar = () => {
    const [openmodal, setOpenmodal] = useState(false);
 
    const fetchCourses = () => {
-      fetch('http://localhost:3000/')
+      fetch('https://oned-backend-yfvd.onrender.com/')
          .then(response => response.json())
          .then(data => setCourses(data))
          .catch(error => console.error('Error fetching courses:', error));
@@ -30,7 +30,7 @@ const Sidebar = () => {
 
    const fetchsavedCourses = async () => {
       try {
-         const response = await fetch('http://localhost:3000/getuser/savedcourses', {
+         const response = await fetch('https://oned-backend-yfvd.onrender.com/getuser/savedcourses', {
             method: 'POST',
             headers: {
                'Content-Type': 'application/json'
