@@ -38,6 +38,7 @@ const Sidebar = () => {
             body: JSON.stringify({ userid: userid })
          });
          const result = await response.json();
+         console.log(userid);
          if (result.errors) {
             console.error('Unable to fetch user info');
          } else {
