@@ -56,7 +56,6 @@ const Sidebar = () => {
    };
 
    useEffect(() => {
-      console.log('hi')
       fetchCourses();
    },[location.pathname]);
 

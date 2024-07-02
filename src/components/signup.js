@@ -60,11 +60,9 @@ const Signup = () => {
         const data = await response.json();
 
         if (!data.errors) {
-        console.log('i am in !data errors');
             fetchuser(data.authToken);
         }
         else {
-        console.log('i am in else !data errors');
             const newRandomNo = Math.floor(Math.random() * 11);
             setRandomNo(newRandomNo);
             setMessage(data.errors.map(errors => errors.msg));
@@ -72,7 +70,6 @@ const Signup = () => {
     }
 
     const fetchuser = async (authToken) => {
-        console.log('i am in fetchuser of signup');
         const response = await fetch('https://oned-backend-yfvd.onrender.com/getuser', {
             method: 'POST',
             headers: {
