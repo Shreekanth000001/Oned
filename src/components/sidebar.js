@@ -18,6 +18,7 @@ const Sidebar = () => {
    const [openmodal, setOpenmodal] = useState(false);
 
    const fetchCourses = () => {
+      console.log(userid);
       fetch('https://oned-backend-yfvd.onrender.com/')
          .then(response => response.json())
          .then(data => setCourses(data))
