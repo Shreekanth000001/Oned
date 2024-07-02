@@ -18,13 +18,13 @@ const Sidebar = () => {
    const [openmodal, setOpenmodal] = useState(false);
 
    const fetchCourses = () => {
-      console.log(userid);
       fetch('https://oned-backend-yfvd.onrender.com/')
          .then(response => response.json())
          .then(data => setCourses(data))
          .catch(error => console.error('Error fetching courses:', error));
 
       if (userid) {
+      console.log(userid);
          fetchsavedCourses();
       }
    }
