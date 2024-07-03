@@ -9,7 +9,7 @@ const Courses = ({ faculty }) => {
 
     useEffect(() => {
         // Fetch courses from the backend
-        fetch(`https://oned-backend-yfvd.onrender.com/faculty/${faculty}`)
+        fetch(`presidential-dina-critic-coder-bcfa82d2.koyeb.app/faculty/${faculty}`)
             .then(response => response.json())
             .then(data => setCourses(data))
             .catch(error => console.error('Error fetching courses:', error));

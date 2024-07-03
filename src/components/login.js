@@ -13,7 +13,7 @@ function Login() {
     const handleSubmission = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('https://oned-backend-yfvd.onrender.com/login', {
+        const response = await fetch('presidential-dina-critic-coder-bcfa82d2.koyeb.app/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ function Login() {
     }
 
     const fetchuser = async (authToken) => {
-        const response = await fetch('https://oned-backend-yfvd.onrender.com/getuser', {
+        const response = await fetch('presidential-dina-critic-coder-bcfa82d2.koyeb.app/getuser', {
             method: 'POST',
             headers: {
                 'authToken': authToken
