@@ -48,7 +48,7 @@ const Signup = () => {
     const submission = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//signup', {
+        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -70,7 +70,7 @@ const Signup = () => {
     }
 
     const fetchuser = async (authToken) => {
-        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//getuser', {
+        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/getuser', {
             method: 'POST',
             headers: {
                 'authToken': authToken
@@ -83,7 +83,7 @@ const Signup = () => {
         savepass(user);
     }
     const savepass = async (user) => {
-        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//userpass', {
+        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/userpass', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -99,7 +99,7 @@ const Signup = () => {
         }
     }
     const userInfoSubmission = async (user) => {
-        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//signupinfo', {
+        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/signupinfo', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

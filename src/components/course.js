@@ -18,7 +18,7 @@ const Course = ({ courseId, savedcourses }) => {
     const descriptionRefs = useRef({});
 
     useEffect(() => {
-        fetch(`https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//course/${courseId}`)
+        fetch(`https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/course/${courseId}`)
             .then(response => response.json())
             .then(data => {
                 setData(data);
@@ -68,7 +68,7 @@ const Course = ({ courseId, savedcourses }) => {
 
     const bookmarkcourse = async () => {
         if (userid) {
-            const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//bookmark', {
+            const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/bookmark', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ const Course = ({ courseId, savedcourses }) => {
     }
 
     const unbookmarkcourse = async () => {
-        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//bookmark/remove', {
+        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/bookmark/remove', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -46,7 +46,7 @@ const Account = () => {
 
     useEffect(() => {
         const getuserinfo = async () => {
-            const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//userinfo/g', {
+            const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/userinfo/g', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ const Account = () => {
                 });
             }
 
-            const userResponse = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//getuser', {
+            const userResponse = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/getuser', {
                 method: 'POST',
                 headers: {
                     'authToken': authToken
@@ -97,7 +97,7 @@ const Account = () => {
     }
     const helpSubmit = async (e) => {
         e.preventDefault()
-        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//help', {
+        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/help', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -122,7 +122,7 @@ const Account = () => {
     }
 
     const profileSubmition = async () => {
-        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//userinfo/p', {
+        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/userinfo/p', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -160,7 +160,7 @@ const Account = () => {
     };
 
     const settingsSubmition = async (name) => {
-        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//userinfo/sp', {
+        const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/userinfo/sp', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

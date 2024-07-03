@@ -18,7 +18,7 @@ const Sidebar = () => {
    const [openmodal, setOpenmodal] = useState(false);
 
    const fetchCourses = () => {
-      fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//')
+      fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/')
          .then(response => response.json())
          .then(data => setCourses(data))
          .catch(error => console.error('Error fetching courses:', error));
@@ -31,7 +31,7 @@ const Sidebar = () => {
 
    const fetchsavedCourses = async () => {
       try {
-         const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app//getuser/savedcourses', {
+         const response = await fetch('https://presidential-dina-critic-coder-bcfa82d2.koyeb.app/getuser/savedcourses', {
             method: 'POST',
             headers: {
                'Content-Type': 'application/json'
